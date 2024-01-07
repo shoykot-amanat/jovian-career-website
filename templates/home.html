@@ -14,17 +14,25 @@
     </style>
 </head>
 <body>
-    <div>
-        <h1 class="text-center" >Jovian Career</h1>
+    <div style="margin-left: 50px; margin-right: 50px;">
+        <h1 class="text-center mt-4 mb-4">Jovian Career</h1>
         <img id="banner" class="img-fluid" src="http://192.168.0.104:5000/static/banner.jpg" height="300">
-        <h2 class="text-center">About Jovian</h2>
-        <p>Jovian is a career portal for job seekers and employers. 
-            It is a platform where job seekers can find jobs and employers can find the right candidates for their company.</p>
-        <h2 class="text-center">Job Openings</h2>
-        <p class> TODO- Job seekers can find the list of job openings here.</p>
-        <div style>
-            <button>Contact Us</button>
-            <p>Copyright: Amanat, 2024</p>
+        <h2 class="text-center mt-4 mb-4">About Jovian</h2>
+        <p class="lead"> Jovian is a fast-growing startup in the field of online education.
+            We are building a platform to make education accessible and affordable to everyone in the world.
+            We are a team of passionate engineers, designers, educators, and content creators who believe that education is a fundamental human right.
+            We take pride in the work we do, and we are relentless in our pursuit of excellence. 
+            If you share our vision and want to be part of the team, we invite you to apply for the following roles. 
+        </p>    
+        <h2 class="text-center mt-4 mb-4">Job Openings</h2>
+        <div>
+            {% for job in jobs %}
+                {% include 'jobitem.html' %}
+            {% endfor %}
+        </div>
+        <div style="text-align: center;">
+            <button class="btn btn-primary btn-lg">Contact Us</button>
+            <p class="mt-4 mb-4">Copyright: Amanat, 2024</p>
         </div>
     </div>
 </body>
